@@ -5,7 +5,7 @@ const path = require("path");
 const fs = require("fs");
 const app = express();
 
-const port = 5002;
+const port = process.env.PORT || 5002
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
